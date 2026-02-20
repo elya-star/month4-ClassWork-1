@@ -7,6 +7,7 @@ class Proglang(models.Model):
     file_python = models.FileField(upload_to='files/', verbose_name='загрузите файл', blank=True, null=True)
     created_date_lang = models.PositiveBigIntegerField(verbose_name='укажите год создания языка', blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    views = models.PositiveIntegerField(default=0, null=True)
 
     def __str__(self):
         return self.title
